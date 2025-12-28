@@ -1,0 +1,42 @@
+# ============================================
+# Airflow Connections Configuration
+# Use these connection IDs in your DAGs
+# ============================================
+
+# Note: Add these connections via Airflow UI or CLI after startup
+
+# Connection 1: Staging Database
+# Connection ID: staging_db
+# Connection Type: Postgres
+# Host: postgres
+# Schema: staging
+# Login: staging_user
+# Password: staging_password
+# Port: 5432
+
+# Connection 2: Telecom Database
+# Connection ID: telecom_db
+# Connection Type: Postgres
+# Host: postgres
+# Schema: telecom
+# Login: telecom_user
+# Password: telecom_password
+# Port: 5432
+
+# CLI Commands to add connections:
+# docker exec -it telecom_airflow_webserver airflow connections add 'staging_db' \
+#     --conn-type 'postgres' \
+#     --conn-host 'postgres' \
+#     --conn-schema 'staging' \
+#     --conn-login 'staging_user' \
+#     --conn-password 'staging_password' \
+#     --conn-port '5432'
+
+# docker exec -it telecom_airflow_webserver airflow connections add 'telecom_db' \
+#     --conn-type 'postgres' \
+#     --conn-host 'postgres' \
+#     --conn-schema 'telecom' \
+#     --conn-login 'telecom_user' \
+#     --conn-password 'telecom_password' \
+#     --conn-port '5432'
+

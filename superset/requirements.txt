@@ -1,0 +1,11 @@
+# ============================================
+# Superset Python Dependencies
+# ============================================
+
+# Database Drivers
+psycopg2-binary==2.9.9
+
+# Additional Superset features (optional)
+# redis==5.0.1
+# celery==5.3.4
+

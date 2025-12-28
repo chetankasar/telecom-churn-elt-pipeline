@@ -1,0 +1,14 @@
+[2025-12-28T10:47:29.113+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: telecom_churn_pipeline.check_for_files scheduled__2025-12-28T09:00:00+00:00 [queued]>
+[2025-12-28T10:47:29.116+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: telecom_churn_pipeline.check_for_files scheduled__2025-12-28T09:00:00+00:00 [queued]>
+[2025-12-28T10:47:29.117+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2025-12-28T10:47:29.125+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): check_for_files> on 2025-12-28 09:00:00+00:00
+[2025-12-28T10:47:29.129+0000] {standard_task_runner.py:60} INFO - Started process 203 to run task
+[2025-12-28T10:47:29.131+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'telecom_churn_pipeline', 'check_for_files', 'scheduled__2025-12-28T09:00:00+00:00', '--job-id', '50', '--raw', '--subdir', 'DAGS_FOLDER/telecom_churn_pipeline.py', '--cfg-path', '/tmp/tmpx7vati4o']
+[2025-12-28T10:47:29.133+0000] {standard_task_runner.py:88} INFO - Job 50: Subtask check_for_files
+[2025-12-28T10:47:29.173+0000] {task_command.py:423} INFO - Running <TaskInstance: telecom_churn_pipeline.check_for_files scheduled__2025-12-28T09:00:00+00:00 [running]> on host 5b19e416ec1e
+[2025-12-28T10:47:29.223+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='telecom-team' AIRFLOW_CTX_DAG_ID='telecom_churn_pipeline' AIRFLOW_CTX_TASK_ID='check_for_files' AIRFLOW_CTX_EXECUTION_DATE='2025-12-28T09:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-12-28T09:00:00+00:00'
+[2025-12-28T10:47:29.225+0000] {logging_mixin.py:188} INFO - No CSV files found in /opt/***/data/raw
+[2025-12-28T10:47:29.225+0000] {python.py:201} INFO - Done. Returned value was: []
+[2025-12-28T10:47:29.243+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=telecom_churn_pipeline, task_id=check_for_files, execution_date=20251228T090000, start_date=20251228T104729, end_date=20251228T104729
+[2025-12-28T10:47:29.267+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-12-28T10:47:29.290+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,14 @@
+[2025-12-28T11:00:16.291+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: telecom_churn_pipeline.move_files_to_processed manual__2025-12-28T11:00:11.847884+00:00 [queued]>
+[2025-12-28T11:00:16.295+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: telecom_churn_pipeline.move_files_to_processed manual__2025-12-28T11:00:11.847884+00:00 [queued]>
+[2025-12-28T11:00:16.295+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2025-12-28T11:00:16.305+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): move_files_to_processed> on 2025-12-28 11:00:11.847884+00:00
+[2025-12-28T11:00:16.310+0000] {standard_task_runner.py:60} INFO - Started process 200 to run task
+[2025-12-28T11:00:16.312+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'telecom_churn_pipeline', 'move_files_to_processed', 'manual__2025-12-28T11:00:11.847884+00:00', '--job-id', '63', '--raw', '--subdir', 'DAGS_FOLDER/telecom_churn_pipeline.py', '--cfg-path', '/tmp/tmp7kuyje1d']
+[2025-12-28T11:00:16.313+0000] {standard_task_runner.py:88} INFO - Job 63: Subtask move_files_to_processed
+[2025-12-28T11:00:16.346+0000] {task_command.py:423} INFO - Running <TaskInstance: telecom_churn_pipeline.move_files_to_processed manual__2025-12-28T11:00:11.847884+00:00 [running]> on host 8ba4aecbd959
+[2025-12-28T11:00:16.401+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='telecom-team' AIRFLOW_CTX_DAG_ID='telecom_churn_pipeline' AIRFLOW_CTX_TASK_ID='move_files_to_processed' AIRFLOW_CTX_EXECUTION_DATE='2025-12-28T11:00:11.847884+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-12-28T11:00:11.847884+00:00'
+[2025-12-28T11:00:16.408+0000] {logging_mixin.py:188} INFO - No files to move
+[2025-12-28T11:00:16.409+0000] {python.py:201} INFO - Done. Returned value was: {'status': 'no_files', 'files_moved': 0}
+[2025-12-28T11:00:16.425+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=telecom_churn_pipeline, task_id=move_files_to_processed, execution_date=20251228T110011, start_date=20251228T110016, end_date=20251228T110016
+[2025-12-28T11:00:16.445+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-12-28T11:00:16.460+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check
