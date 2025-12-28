@@ -41,7 +41,12 @@ cp .env.example .env
 echo "AIRFLOW_UID=$(id -u)" >> .env
 ```
 
-### 2. Start Services
+### 2. Fix permissions on logs and data directories
+
+chmod -R 777 airflow/logs
+chmod -R 777 data
+
+### 3. Start Services
 
 ```bash
 # Start all containers
@@ -51,7 +56,7 @@ podman-compose up -d
 podman-compose logs -f
 ```
 
-### 3. Access Services
+### 4. Access Services
 
 - **Airflow**: http://localhost:8080 (username: `airflow`, password: `airflow`)
 - **Superset**: http://localhost:8088 (username: `admin`, password: `admin`)

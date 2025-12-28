@@ -1538,3 +1538,31 @@
 [2025-12-28T14:16:06.091+0000] {logging_mixin.py:188} INFO - [2025-12-28T14:16:06.091+0000] {dag.py:3036} INFO - Sync 1 DAGs
 [2025-12-28T14:16:06.104+0000] {logging_mixin.py:188} INFO - [2025-12-28T14:16:06.104+0000] {dag.py:3823} INFO - Setting next_dagrun for telecom_churn_pipeline to 2025-12-28 14:00:00+00:00, run_after=2025-12-28 15:00:00+00:00
 [2025-12-28T14:16:06.122+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/telecom_churn_pipeline.py took 0.201 seconds
+[2025-12-28T14:16:36.426+0000] {processor.py:161} INFO - Started process (PID=345) to work on /opt/airflow/dags/telecom_churn_pipeline.py
+[2025-12-28T14:16:36.432+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/telecom_churn_pipeline.py for tasks to queue
+[2025-12-28T14:16:36.435+0000] {logging_mixin.py:188} INFO - [2025-12-28T14:16:36.433+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/telecom_churn_pipeline.py
+[2025-12-28T14:16:36.634+0000] {processor.py:840} INFO - DAG(s) 'telecom_churn_pipeline' retrieved from /opt/airflow/dags/telecom_churn_pipeline.py
+[2025-12-28T14:16:36.653+0000] {logging_mixin.py:188} INFO - [2025-12-28T14:16:36.653+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-12-28T14:16:36.667+0000] {logging_mixin.py:188} INFO - [2025-12-28T14:16:36.666+0000] {dag.py:3823} INFO - Setting next_dagrun for telecom_churn_pipeline to 2025-12-28 14:00:00+00:00, run_after=2025-12-28 15:00:00+00:00
+[2025-12-28T14:16:36.682+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/telecom_churn_pipeline.py took 0.262 seconds
+[2025-12-28T14:17:06.825+0000] {processor.py:161} INFO - Started process (PID=354) to work on /opt/airflow/dags/telecom_churn_pipeline.py
+[2025-12-28T14:17:06.831+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/telecom_churn_pipeline.py for tasks to queue
+[2025-12-28T14:17:06.833+0000] {logging_mixin.py:188} INFO - [2025-12-28T14:17:06.833+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/telecom_churn_pipeline.py
+[2025-12-28T14:17:07.105+0000] {processor.py:840} INFO - DAG(s) 'telecom_churn_pipeline' retrieved from /opt/airflow/dags/telecom_churn_pipeline.py
+[2025-12-28T14:17:07.137+0000] {logging_mixin.py:188} INFO - [2025-12-28T14:17:07.136+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-12-28T14:17:07.158+0000] {logging_mixin.py:188} INFO - [2025-12-28T14:17:07.158+0000] {dag.py:3823} INFO - Setting next_dagrun for telecom_churn_pipeline to 2025-12-28 14:00:00+00:00, run_after=2025-12-28 15:00:00+00:00
+[2025-12-28T14:17:07.172+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/telecom_churn_pipeline.py took 0.358 seconds
+[2025-12-28T14:17:37.477+0000] {processor.py:161} INFO - Started process (PID=363) to work on /opt/airflow/dags/telecom_churn_pipeline.py
+[2025-12-28T14:17:37.480+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/telecom_churn_pipeline.py for tasks to queue
+[2025-12-28T14:17:37.483+0000] {logging_mixin.py:188} INFO - [2025-12-28T14:17:37.482+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/telecom_churn_pipeline.py
+[2025-12-28T14:17:38.519+0000] {processor.py:840} INFO - DAG(s) 'telecom_churn_pipeline' retrieved from /opt/airflow/dags/telecom_churn_pipeline.py
+[2025-12-28T14:17:38.576+0000] {logging_mixin.py:188} INFO - [2025-12-28T14:17:38.575+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-12-28T14:17:38.610+0000] {logging_mixin.py:188} INFO - [2025-12-28T14:17:38.610+0000] {dag.py:3823} INFO - Setting next_dagrun for telecom_churn_pipeline to 2025-12-28 14:00:00+00:00, run_after=2025-12-28 15:00:00+00:00
+[2025-12-28T14:17:38.642+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/telecom_churn_pipeline.py took 1.185 seconds
+[2025-12-28T14:18:08.818+0000] {processor.py:161} INFO - Started process (PID=369) to work on /opt/airflow/dags/telecom_churn_pipeline.py
+[2025-12-28T14:18:08.819+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/telecom_churn_pipeline.py for tasks to queue
+[2025-12-28T14:18:08.820+0000] {logging_mixin.py:188} INFO - [2025-12-28T14:18:08.819+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/telecom_churn_pipeline.py
+[2025-12-28T14:18:09.041+0000] {processor.py:840} INFO - DAG(s) 'telecom_churn_pipeline' retrieved from /opt/airflow/dags/telecom_churn_pipeline.py
+[2025-12-28T14:18:09.064+0000] {logging_mixin.py:188} INFO - [2025-12-28T14:18:09.064+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-12-28T14:18:09.081+0000] {logging_mixin.py:188} INFO - [2025-12-28T14:18:09.081+0000] {dag.py:3823} INFO - Setting next_dagrun for telecom_churn_pipeline to 2025-12-28 14:00:00+00:00, run_after=2025-12-28 15:00:00+00:00
+[2025-12-28T14:18:09.096+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/telecom_churn_pipeline.py took 0.282 seconds
