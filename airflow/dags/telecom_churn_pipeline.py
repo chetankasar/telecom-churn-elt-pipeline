@@ -356,7 +356,7 @@ with DAG(
     default_args=default_args,
     description='Telecom Churn ELT Pipeline - Extract, Load, Transform',
     schedule_interval=SCHEDULE_INTERVAL,
-    start_date=datetime(2025, 12, 28),
+    start_date=datetime(2025, 12, 27),
     catchup=False,
     tags=['telecom', 'churn'],
 ) as dag:
