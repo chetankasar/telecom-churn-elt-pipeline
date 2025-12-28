@@ -20,6 +20,11 @@ CREATE USER telecom_user WITH ENCRYPTED PASSWORD 'telecom_password';
 GRANT ALL PRIVILEGES ON DATABASE telecom TO telecom_user;
 GRANT ALL PRIVILEGES ON DATABASE telecom TO postgres;
 
+-- Create Superset database and user
+CREATE DATABASE superset;
+CREATE USER superset WITH ENCRYPTED PASSWORD 'superset';
+GRANT ALL PRIVILEGES ON DATABASE superset TO superset;
+
 -- Grant schema permissions for Airflow
 \c airflow;
 GRANT ALL ON SCHEMA public TO airflow;
@@ -39,3 +44,9 @@ GRANT ALL ON SCHEMA public TO telecom_user;
 ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON TABLES TO telecom_user;
 ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON SEQUENCES TO telecom_user;
 GRANT CREATE ON SCHEMA public TO telecom_user;
+
+-- Grant schema permissions for Superset
+\c superset;
+GRANT ALL ON SCHEMA public TO superset;
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON TABLES TO superset;
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON SEQUENCES TO superset;

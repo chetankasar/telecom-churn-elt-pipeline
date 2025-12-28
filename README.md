@@ -35,7 +35,7 @@ A complete data engineering platform for telecom churn analysis using Apache Air
 cd telecom-churn-insights
 
 # Copy environment file
-cp env.example .env
+cp .env.example .env
 
 # Set Airflow UID (Linux/Mac)
 echo "AIRFLOW_UID=$(id -u)" >> .env

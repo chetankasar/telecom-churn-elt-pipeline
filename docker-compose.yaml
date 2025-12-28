@@ -4,7 +4,7 @@
 
 x-airflow-common: &airflow-common
   build:
-    context: ./docker/airflow
+    context: ./airflow
     dockerfile: Dockerfile
   environment: &airflow-common-env
     AIRFLOW__CORE__EXECUTOR: LocalExecutor
@@ -36,7 +36,7 @@ services:
   # ============================================
   postgres:
     build:
-      context: ./docker/postgres
+      context: ./postgres
       dockerfile: Dockerfile
     container_name: telecom_postgres
     environment:
@@ -130,7 +130,7 @@ services:
   # ============================================
   superset:
     build:
-      context: ./docker/superset
+      context: ./superset
       dockerfile: Dockerfile
     container_name: telecom_superset
     environment:
