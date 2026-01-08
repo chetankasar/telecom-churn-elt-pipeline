@@ -161,6 +161,45 @@ services:
         superset run -h 0.0.0.0 -p 8088 --with-threads --reload
       "
 
+  # ============================================
+  # Apache Spark - Master (Driver)
+  # ============================================
+  spark-master:
+    build:
+      context: ./spark
+      dockerfile: Dockerfile
+    container_name: telecom_spark_master
+    entrypoint: ["/opt/spark/bin/spark-class"]
+    command: ["org.apache.spark.deploy.master.Master"]
+    ports:
+      - "8081:8080"
+      - "7077:7077"
+      - "6066:6066"
+    environment:
+      SPARK_MASTER_HOST: spark-master
+      SPARK_MASTER_WEBUI_PORT: "8080"
+    restart: unless-stopped
+    networks:
+      - telecom_network
+
+  # ============================================
+  # Apache Spark - Worker (Executor)
+  # Scale with: docker-compose up --scale spark-worker=2
+  # ============================================
+  spark-worker:
+    build:
+      context: ./spark
+      dockerfile: Dockerfile
+    entrypoint: ["/opt/spark/bin/spark-class"]
+    command: ["org.apache.spark.deploy.worker.Worker", "spark://spark-master:7077"]
+    environment:
+      SPARK_WORKER_DIR: /tmp/spark-worker
+    depends_on:
+      - spark-master
+    restart: unless-stopped
+    networks:
+      - telecom_network
+
 volumes:
   postgres_data:
   superset_data:
