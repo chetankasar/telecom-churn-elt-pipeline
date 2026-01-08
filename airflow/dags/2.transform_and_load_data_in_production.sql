@@ -4,7 +4,7 @@
 -- 2. Handle missing values with defaults
 -- 3. Anonymize CustomerID (PII) using SHA-256 hash
 -- 4. Add transformation metadata
--- 5. Remove staging metadata columns
+
 
 -- Step 1: Create temporary view from staging PostgreSQL table
 CREATE OR REPLACE TEMPORARY VIEW staging_data
@@ -17,6 +17,7 @@ OPTIONS (
     driver 'org.postgresql.Driver'
 )
 ;
+
 
 -- Step 2: Create transformed view with all transformations
 CREATE OR REPLACE TEMPORARY VIEW transformed_data AS
@@ -42,6 +43,7 @@ SELECT
     -- Note: Excluding staging metadata columns (source_file, loaded_at) if they exist
 FROM staging_data
 ;
+
 
 -- Step 3: Create table if not exists in telecom database
 CREATE TABLE IF NOT EXISTS jdbc.`jdbc:postgresql://postgres:5432/telecom?user=telecom_user&password=telecom_password`
@@ -80,6 +82,7 @@ SELECT
 FROM transformed_data
 WHERE 1=0
 ;
+
 
 -- Step 4: Append transformed data to telecom table
 INSERT INTO TABLE jdbc.`jdbc:postgresql://postgres:5432/telecom?user=telecom_user&password=telecom_password`
